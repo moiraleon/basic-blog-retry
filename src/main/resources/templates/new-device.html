@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Device</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark ">
+    <a class="navbar-brand" href="/">
+        <img alt="Brand" th:src="@{/images/best-tech-logo-1.png}" height="42">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="/new-device">Add New Device</a></li>
+            <li class="nav-item"><a href="/profile">Profile</a></li>
+        </ul>
+    </div>
+</nav>
+
+<h1 style="text-align:center;">Add new device</h1>
+<form name="addNewDeviceForm" method="POST" action="#" th:action="@{/new-device}" th:object="${newDevice}">
+    <div align="center">
+        <table>
+            <tr>
+                <td>Machine Make</td>
+                <td><input type="text" name="make" th:field="*{make}" /></td>
+            </tr>
+            <tr>
+                <td>Machine Model</td>
+                <td><input type="text" name="model" th:field="*{model}"/></td>
+            </tr>
+            <tr>
+                <td>Bluetooth ID</td>
+                <td><input type="text" name="bluetooth" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"/></td>
+            </tr>
+        </table>
+
+        <div style="color:red">
+            <p th:text="${error}"></p>
+        </div>
+
+    </div>
+</form>
+
+
+
+</body>
+</html>
