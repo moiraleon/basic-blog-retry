@@ -31,4 +31,8 @@ public class NewDevice {
     public void setBluetooth(int bluetooth) {
         this.bluetooth = bluetooth;
     }
+
+
+
+
 }

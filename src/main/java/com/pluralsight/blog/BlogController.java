@@ -65,15 +65,14 @@ public class BlogController {
     }
 
     @PostMapping(value = "/new-device")
-    public String listDevices(ModelMap modelMap, @ModelAttribute NewDevice newDevice) {
-        if (newDevice.getMake().equals("make")&& newDevice.getModel().equals("model")) {
-            modelMap.addAttribute("msg","Please enter device credentials");
-            modelMap.addAttribute("error"," ");
-//            List<Post> posts = postRepository.getAllPosts();
-//            modelMap.put("posts", posts);
+    public String listDevices(Model model, @ModelAttribute NewDevice newDevice) {
+        if (newDevice.getMake().equals("make") && newDevice.getModel().equals("model")) {
+            model.addAttribute("msg","Please enter device credentials");
+            model.addAttribute("error"," ");
             return "new-device";
-        }else{
-            modelMap.addAttribute("error", "Invalid Device Entry. Please try again.");
+        }
+        else{
+            model.addAttribute("error", "Invalid Device Entry. Please try again.");
             return "new-device";
         }
     }
