@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+
+h1, h2, h3, h4, h5 {
+  border-bottom: 1px solid #ccc;
+  color: #3F51B5;
+  padding-bottom: 8px
+}
+.container {
+  margin: auto;
+  width: 350px;
+  text-align: center;
+}
+.listFlex {display: flex; justify-content: center;}
+
+img {
+  width: 100%;
+}
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark ">
+    <a class="navbar-brand" href="/">
+        <img alt="Brand" th:src="@{/images/best-tech-logo-1.png}" height="42">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="/new-device">Add New Device</a></li>
+            <li class="nav-item"><a href="/profile">Profile</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container">
+    <h1>Profile</h1>
+    <h3>First LastName</h3>
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co/pdJfzx9/profile-picture.jpg" alt="profile-picture"
+                                      border="0"/></a>
+    <h4>Contact Information</h4>
+    <p>phone: 800-000-0000 <br>
+    address: 1234 S 456 Dr Cincinatti, OH <br>
+    email: firstlast@gmail.com</p>
+    <h4>Current Devices</h4>
+    <div class="listFlex">
+        <div>
+            <ul>
+                <li>Smart Washer: LG</li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

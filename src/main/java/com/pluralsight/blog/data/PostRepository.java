@@ -35,14 +35,6 @@ public class PostRepository {
             new Post(6l, "Mobile Tripod",
                     "Best gift for that older adult in your life who cannot keep their face in the FaceTime window.",
                     "Best gift for that older adult in your life who cannot keep their face in the FaceTime window.",
-                    "Sarah Holderness", new Date()),
-            new Post(7l, "Travel Keyboard",
-                    "You never know when inspiration for your latest novel will strike. Meet the perfect travel keyboard for your random thoughts.",
-                    "You never know when inspiration for your latest novel will strike. Meet the perfect travel keyboard for your random thoughts.",
-                    "Sarah Holderness", new Date()),
-            new Post(8l, "SD Card Reader",
-                    "When a stranger passes us a top secret SD card the adventure begins.  Jason Bourne says, \"Hi\".",
-                    "When a stranger passes us a top secret SD card the adventure begins.  Jason Bourne says, \"Hi\".",
                     "Sarah Holderness", new Date())
     ));
 
